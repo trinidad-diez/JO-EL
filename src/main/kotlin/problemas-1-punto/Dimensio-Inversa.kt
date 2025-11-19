@@ -10,11 +10,9 @@ fun main(){
     val sc : Scanner = Scanner(System.`in`)
 
     // Enmagatzema l'entrada (el nombre) en una variable.
-    val n : Double = sc.nextDouble()
+    val n : Double = sc.nextInt().toDouble()
 
     // Calcula el nombre invers.
     val nombreInvers : Double = 1 / n
-
-    // Imprimeix el nombre invers a la pantalla.
-    println(nombreInvers)
+    println(1 / nombreInvers)
 }
