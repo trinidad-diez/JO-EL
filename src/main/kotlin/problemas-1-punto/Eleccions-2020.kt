@@ -1,25 +1,24 @@
 import java.util.Scanner
 
 /*
-    Entrada:
-        1) Vots Jiden.
-        2) Vots Drump.
-    Sortida: candidat guanyador.
+    Entrada: Edat (Intreger).
+    Sortida:
+        * < 32 -> "SI"
+        else -> "NO"
  */
 
 fun main(){
     // Crea un escàner per llegir l'entrada de l'usuari.
     val sc : Scanner = Scanner(System.`in`)
 
-    // Enmagatzema l'entrada (els nombres) en dues variables.
-    val votsJiden : Int = sc.nextInt()
-    val votsDrump : Int = sc.nextInt()
+    // Enmagatzema l'entrada (el nombre) en una variable.
+    val nombre : Int = sc.nextInt()
 
-    // Imprimeix el nombre del guanyador a la consola.
-    if (votsJiden > votsDrump){
-        println("Jiden")
+    // Imprimeix la resposta corresponent a la consola.
+    if (nombre < 32){
+        println("SI")
     } else {
-        println("Drump")
+        println("NO")
     }
 
     // Tanca l'escàner.
