@@ -1,3 +1,4 @@
+package `problemas-1-punto`
 import java.util.Scanner
 
 /*
