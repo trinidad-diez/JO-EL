@@ -20,7 +20,7 @@ fun main(){
     var resposta = "SI"
 
     // Es fixa si és any de divisible.
-    for(i in 6 until 10){
+    for(i in 2 until 10){
         if(n % i != 0){
             resposta = "NO"
         }
