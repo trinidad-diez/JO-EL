@@ -12,10 +12,10 @@ fun main(){
     val sc : Scanner = Scanner(System.`in`)
 
     // Enmagatzema els dos nombre en una variable.
-    val num1 : Int = sc.nextInt()
+    val any : Int = sc.nextInt()
 
     // Es fixa si és any de trespàs (divisible per 4).
-    if (num1 % 4 == 0){
+    if ((any % 4 == 0 && any % 100 != 0) || (any % 400 == 0)) {
         println("SI")
     } else {
         println("NO")
