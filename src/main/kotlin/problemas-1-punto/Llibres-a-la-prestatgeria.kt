@@ -1,5 +1,3 @@
-package `problemas-1-punto`
-
 import java.util.Scanner
 
 /*
@@ -28,4 +26,6 @@ fun main(){
         println((espaiTotal - k)* -1)
     }
 
-// Tanca l'escàner.
+    // Tanca l'escàner.
+    sc.close()
+}
