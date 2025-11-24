@@ -2,11 +2,8 @@ package `problemas-1-punto`
 import java.util.Scanner
 
 /*
-    Entrada:
-        1) Nom + edat.
-        2) Nom + edat.
-
-    Sortida: Nom de l'avi més vell.
+    Entrada: 3 nombres enters: N (prestatges), M (capacitat de cada prestatge), K (total llibres que volem posar)
+    Sortida: total de llibres que no han cabut als prestatges.
 */
 
 fun main(){
@@ -14,18 +11,20 @@ fun main(){
     val sc : Scanner = Scanner(System.`in`)
 
     // Emmagatzema les entrades en variables.
-    var nom1 = sc.next()
-    var edat1 : Int = sc.nextInt()
-    var nom2 = sc.next()
-    var edat2 : Int = sc.nextInt()
+    var n : Int = sc.nextInt()
+    var m : Int = sc.nextInt()
+    var k : Int = sc.nextInt()
 
-    // Imprimeix l'edat més gran a la consola.
-    if (edat1 > edat2){
-        println(nom1)
-    } else if (edat2 > edat1){
-        println(nom2)
+    // Calcula l'espai total per llibres.
+    val espaiTotal : Int = n * m
+
+    // Imprimeix total de llibres que no han cabut als prestatges a la consola.
+    if ((espaiTotal == 0)|| (k == 0)){
+        println(k)
+    } else if (espaiTotal > k){
+        println(0)
     } else {
-        println("Cap es mes vell")
+        println((espaiTotal - k)* -1)
     }
 
     // Tanca l'escàner.
