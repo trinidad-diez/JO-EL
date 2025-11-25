@@ -60,5 +60,6 @@ fun main() {
         }
     }
 
+    // Tanca l'escàner.
     sc.close()
 }
