@@ -42,7 +42,7 @@ fun main(){
     } else if (mida2 > mida1){
         println(nom2)
     } else {
-        println("Les dues cases son igual de grans.")
+        println("Les dues cases son igual de grans")
     }
 
 }
