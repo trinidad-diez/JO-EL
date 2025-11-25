@@ -2,31 +2,29 @@ package `problemas-1-punto`
 import java.util.Scanner
 
 /*
-    Entrada: 3 nombres enters: N (prestatges), M (capacitat de cada prestatge), K (total llibres que volem posar)
-    Sortida: total de llibres que no han cabut als prestatges.
-*/
+    Entrada: (nom i edat (Integer)) x2.
+    Sortida: nom de la persona amb més edat.
+ */
 
 fun main(){
-    // Crea un escàner per llegir l'entrada de l'usuari.
-    val sc : Scanner = Scanner(System.`in`)
+    // Crea un escàner per a l'entrada de l'usuari.
+    val lector : Scanner = Scanner(System.`in`)
 
-    // Emmagatzema les entrades en variables.
-    var n : Int = sc.nextInt()
-    var m : Int = sc.nextInt()
-    var k : Int = sc.nextInt()
+    // Desa els valors escanejats en variables.
+    val nomPersona1 = lector.next()
+    val edatPersona1 : Int = lector.nextInt()
+    val nomPersona2 = lector.next()
+    val edatPersona2 : Int = lector.nextInt()
 
-    // Calcula l'espai total per llibres.
-    val espaiTotal : Int = n * m
-
-    // Imprimeix total de llibres que no han cabut als prestatges a la consola.
-    if ((espaiTotal == 0)|| (k == 0)){
-        println(k)
-    } else if (espaiTotal > k){
-        println(0)
+    // Imprimeix el nom de la persona amb més edat.
+    if (edatPersona1 > edatPersona2) {
+        println(nomPersona1)
+    } else if (edatPersona1 == edatPersona2){
+        println("Tenen la mateixa edat")
     } else {
-        println((espaiTotal - k)* -1)
+        println(nomPersona2)
     }
 
     // Tanca l'escàner.
-    sc.close()
+    lector.close()
 }
