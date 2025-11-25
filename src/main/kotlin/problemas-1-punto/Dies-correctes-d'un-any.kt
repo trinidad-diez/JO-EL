@@ -10,13 +10,14 @@ import java.util.Scanner
 */
 
 fun main() {
+    // Crea unb escàner per llegir l'entrada de l'usuari.
     val sc = Scanner(System.`in`)
 
-    print("Introdueix un número de dia de l'any: ")
-    val input = sc.nextLine().trim()
-    val dia = input.toIntOrNull()
+    // Emmagatzema l'entrada en una variable.
+    val dia : Int = sc.nextInt()
 
-    if (dia == null || dia < 1 || dia > 366) {
+    // Imprimeix un resultat segons l'entrada.
+    if (dia !in 1..366) {
         println("Incorrecte!")
     } else if (dia in 1..365) {
         println("Correcte per un any no bixest!")
@@ -24,6 +25,7 @@ fun main() {
         println("Correcte per un any bixest!")
     }
 
+    // Tanca l'escàner
     sc.close()
 }
 
