@@ -2,31 +2,42 @@ package `problemas-1-punto`
 import java.util.Scanner
 
 /*
-    Entrada: 3 nombres enters
-    Sortida: total de llibres que no han cabut als prestatges.
+    Entrada: 3 nombres (Double) separats per coma.
+    Sortida: Suspès, Aprovat, Notable o Excel·lent.
+    L'Aprovat correspon a una nota final d'entre 5 i 7 inclosos,
+    el Notable a una nota final superior a 7 i fins a 9 (inclòs),
+    i l'Excel·lent a una nota superior a 9.
 */
 
-fun main(){
-    // Crea un escàner per llegir l'entrada de l'usuari.
-    val sc : Scanner = Scanner(System.`in`)
+fun main() {
+    val sc = Scanner(System.`in`)
 
-    // Emmagatzema les entrades en variables.
-    var n : Int = sc.nextInt()
-    var m : Int = sc.nextInt()
-    var k : Int = sc.nextInt()
+    // Llegeix tota la línia d'entrada (ex: 6.5,7.0,8.25)
+    val entrada = sc.nextLine()
 
-    // Calcula l'espai total per llibres.
-    val espaiTotal : Int = n * m
+    // Separa els valors per comes i converteix a Double
+    val notes = entrada.split(",").map { it.trim().toDouble() }
 
-    // Imprimeix total de llibres que no han cabut als prestatges a la consola.
-    if ((espaiTotal == 0)|| (k == 0)){
-        println(k)
-    } else if (espaiTotal > k){
-        println(0)
+    // Calcula la mitjana
+    val mitjana = notes.average()
+
+    // Crea una variable pel resultat
+    var resultat = ""
+
+    // Determina la qualificació
+    if (mitjana< 5 ) {
+        resultat = "Suspès"
+    } else if (mitjana <= 7) {
+        resultat = "Aprovat"
+    } else if (mitjana <= 9) {
+        resultat = "Notable"
     } else {
-        println((espaiTotal - k)* -1)
+        resultat= "Excel·lent"
     }
 
-    // Tanca l'escàner.
+    // Imprimeix el resultat
+    println(resultat)
+
+    // Tanca l'escàner
     sc.close()
 }
