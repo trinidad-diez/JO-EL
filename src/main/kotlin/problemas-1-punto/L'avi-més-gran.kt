@@ -1,4 +1,5 @@
 package `problemas-1-punto`
+
 import java.util.Scanner
 
 /*
@@ -28,3 +29,4 @@ fun main(){
     // Tanca l'escàner.
     lector.close()
 }
+
