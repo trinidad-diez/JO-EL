@@ -16,24 +16,34 @@ fun main() {
     val entrada = sc.nextLine()
 
     // Separa els valors per comes i converteix a Double
-    val notes = entrada.split(",").map { it.trim().toDouble() }
+    val notes = entrada.split(",")
 
-    // Calcula la mitjana
-    val mitjana = notes.average()
+    val parcial1 = notes[0].toDouble()
+    val parcial2 = notes[1].toDouble()
+    val practiques = notes[2].toDouble()
 
     // Crea una variable pel resultat
     var resultat = ""
 
-    // Determina la qualificació
-    if (mitjana< 5 ) {
-        resultat = "Suspès"
-    } else if (mitjana <= 7) {
-        resultat = "Aprovat"
-    } else if (mitjana <= 9) {
-        resultat = "Notable"
+    // Si algun parcial és inferior a 4 → Suspes
+    if (parcial1 < 4 || parcial2 < 4) {
+        println("Suspes")
     } else {
-        resultat= "Excel·lent"
+        // Calcular la nota final ponderada
+        val mitjana = parcial1 * 0.3 + parcial2 * 0.5 + practiques * 0.2
+
+        // Determina la qualificació
+        if (mitjana < 5 ) {
+            resultat = "Suspès"
+        } else if (mitjana <= 7) {
+            resultat = "Aprovat"
+        } else if (mitjana <= 9) {
+            resultat = "Notable"
+        } else {
+            resultat= "Excel·lent"
+        }
     }
+
 
     // Imprimeix el resultat
     println(resultat)
