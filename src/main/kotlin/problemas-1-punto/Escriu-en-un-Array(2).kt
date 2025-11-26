@@ -31,6 +31,9 @@ fun main() {
     // Llegim la posició a accedir
     val arrayPosition : Int = sc.nextInt()
 
+    // Tanca l'escàner.
+    sc.close()
+
     // Imprimim l’array complet
     for (i in 0 until tamanyArray) {
         println("${array[i]} ")

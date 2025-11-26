@@ -27,6 +27,9 @@ fun main() {
 
     val arrayPosition : Int = sc.nextInt()
 
+    // Tanca l'escàner.
+    sc.close()
+
     for (i in 0 until tamanyArray){
         print("${array[i]} ")
     }

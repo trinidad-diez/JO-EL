@@ -29,6 +29,9 @@ fun main() {
     // Llegim la posició a accedir
     val posicion : Int = sc.nextInt()
 
+    // Tanca l'escàner.
+    sc.close()
+
     // Imprimim l’array complet
     println(llista)
 

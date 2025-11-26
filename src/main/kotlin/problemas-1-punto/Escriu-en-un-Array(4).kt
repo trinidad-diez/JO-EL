@@ -25,6 +25,9 @@ fun main() {
     // Emmagatzema el valor a sumar en una variable
     val numero : Int = sc.nextInt()
 
+    // Tanca l'escàner.
+    sc.close()
+
     // Suma el valor a cada element de l'array.
     for (i in array.indices){
         array[i] += numero
