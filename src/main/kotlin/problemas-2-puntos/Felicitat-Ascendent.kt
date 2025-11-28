@@ -3,11 +3,11 @@ import java.util.Scanner
 
 /*
     Entrada:
-     * C1 (Integer 1-13)
-     * C2 (Integer 1-13)
-     * C3 (Integer 1-13)
+        * F1 (Integer)
+        * F2 (Integer)
+        * F3 (Integer)
 
-     Sortida: "SI" si hi ha dues cartes iguals/"NO"
+    Sortida:  "SI" si la felicitat és ascendent dia a dia i "NO" en cas contrari
  */
 
 fun main(){
@@ -23,7 +23,7 @@ fun main(){
     var resposta = "NO"
 
     // Es fixa quantes són iguals.
-    if (num1 == num2 || num2 == num3 || num1 == num3){
+    if (num1 < num2 && num2 < num3){
         resposta = "SI"
     }
 
