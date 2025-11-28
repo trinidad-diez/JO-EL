@@ -15,20 +15,29 @@ fun main(){
     // Crea un escàner per llegir l'entrada de l'usuari.
     val sc : Scanner = Scanner(System.`in`)
 
-    // Crea una variable per emmagatzemar la resposta.
-    var resposta = "SI"
-
     // Emmagatzema els nombres en variables.
     var hores : Int = sc.nextInt()
     var minuts : Int = sc.nextInt()
     var segons : Int = sc.nextInt()
 
-    if (segons >= 60 || minuts >= 60 || hores >= 24){
-        resposta = "NO"
+    segons ++
+
+    if (segons >= 60){
+        minuts++
+        segons -= 60
     }
 
-    // Imprimeix la resposta.
-    println(resposta)
+    if (minuts >= 60){
+        hores++
+        minuts -= 60
+    }
+
+    if (hores >= 24){
+        hores -= 24
+    }
+
+    // Imprimeix segons, minuts y hores.
+    println("$hores $minuts $segons")
 
     // Tanca l'escàner.
     sc.close()
