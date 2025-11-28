@@ -12,11 +12,12 @@ fun main(){
 
     // Emmagatzema el nombre de cassos de prova en una variable.
     var nombre : Int = sc.nextInt()
+    println(nombre)
 
     // Repteix el bucle fins que el nombre sigui 0.
     while (nombre != 0){
-        println(nombre)
         nombre--
+        println(nombre)
     }
 
     // Tanca l'escàner.
