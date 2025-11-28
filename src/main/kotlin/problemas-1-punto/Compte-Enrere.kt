@@ -2,9 +2,8 @@ package `problemas-1-punto`
 import java.util.Scanner
 
 /*
-    Entrada:
-        1) Casos de prova a considerar.
-        2) Nombre (Integer).
+    Entrada: 1 nombre positiu (Integer).
+    Sortida: Compte enrere fins al 0.
  */
 
 fun main(){
@@ -12,13 +11,12 @@ fun main(){
     val sc : Scanner = Scanner(System.`in`)
 
     // Emmagatzema el nombre de cassos de prova en una variable.
-    val nombreCassos : Int = sc.nextInt()
+    var nombre : Int = sc.nextInt()
 
-    // Repteix el bucle tantes vegades com casos de prova.
-    repeat (nombreCassos){
-        var nombre : Int = sc.nextInt()
-        nombre ++
+    // Repteix el bucle fins que el nombre sigui 0.
+    while (nombre != 0){
         println(nombre)
+        nombre--
     }
 
     // Tanca l'escàner.
