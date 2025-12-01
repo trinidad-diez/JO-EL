@@ -1,42 +1,41 @@
-package `problemas-2-puntos`
 import java.util.Scanner
 
 /*
     Entrada:
-        1) Puntació alabaricoque
-        2) Puntació alabaricoque
-        3) Puntació alabaricoque
-        4) Puntació banana
-        5) Puntació banana
-        6) Puntació banana
+        1) Puntació 3 alabaricoque
+        2) Puntació 2 alabaricoque
+        3) Puntació 1 alabaricoque
+        4) Puntació 3 banana
+        5) Puntació 2 banana
+        6) Puntació 1 banana
 
      Sortida:  A si ganan los Albaricoques, B si ganan las Bananas y T si el partido se va a Tiempo Extra por ser empate.
  */
 
-fun main(){
-    // Crea une escàner per llegir l'entrada de l'usuari.
+fun main() {
+    // Crea un escáner para leer la entrada del usuario.
     val sc : Scanner = Scanner(System.`in`)
 
-    var sumaA : Int = 0
-    repeat(3){
-        sumaA += sc.nextInt()
+    var sumaA: Int = 0
+    for (i in 3 downTo 1) {
+        sumaA += sc.nextInt() * i
     }
 
-    var sumaB : Int = 0
-    repeat(3){
-        sumaB += sc.nextInt()
+    var sumaB: Int = 0
+    for (i in 3 downTo 1) {
+        sumaB += sc.nextInt() * i
     }
 
-    var resposta = "T"
+    var respuesta = "T"
 
-    if (sumaA > sumaB){
-        resposta = "A"
-    } else if (sumaB > sumaA){
-        resposta = "B"
+    if (sumaA > sumaB) {
+        respuesta = "A"
+    } else if (sumaB > sumaA) {
+        respuesta = "B"
     }
 
-    println(resposta)
+    println(respuesta)
 
-    // Tanca l'escàner.
+    // Cierra el escáner.
     sc.close()
 }
